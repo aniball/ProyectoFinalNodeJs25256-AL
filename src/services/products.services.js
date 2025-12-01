@@ -12,7 +12,7 @@ export const getProductById = async (id) => {
 
 export const createProduct = async (productData) => {
     // Aquí se deberían realizar validaciones o enriquecimiento de datos 
-    if (!productData.title || !productData.price || !productData.category) {
+    if (!productData.nombre || !productData.precio || !productData.categoria) {
         throw new Error("Datos de producto incompletos.");
     }
     return await productModel.saveProduct(productData);
@@ -21,6 +21,7 @@ export const createProduct = async (productData) => {
 
 export const deleteProduct = async (id) => {
     const product = await productModel.getProductById(id);
+    //console.log("Producto a eliminar: ", product)
     if (!product) {
         throw new Error("Producto no encontrado.");
     }
