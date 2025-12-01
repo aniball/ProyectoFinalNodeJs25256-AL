@@ -78,7 +78,7 @@ Por defecto el servidor corre en `http://localhost:3000` (puedes cambiar `PORT` 
 	- **Descripción**: Crea un nuevo producto en la colección `products` de Firestore.
 	- **Auth**: Requiere token Bearer en cabecera `Authorization: Bearer <token>`.
 	- **Request** (JSON) ejemplo:
-		`{ "title": "Cafetera", "price": 49.99, "category": "hogar", "description": "Cafetera eléctrica" }`
+		`{ "nombre": "Cafetera", "precio": 30000, "categoria": "hogar", "descripcion": "Cafetera eléctrica" }`
 	- **Response**: `201 Created` con mensaje y objeto creado.
 
 - **DELETE /api/products/:id**
